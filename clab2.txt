@@ -1,0 +1,239 @@
+(6)
+ตรวจสอบความถูกต้องของโปรแกรม ถ้าถูกต้องให้คัดลอกโปรแกรมใส่ด้านล่าง แต่ถ้าผิดให้แก้ไขให้ถูกต้อง
+
+#include <studio.h>
+#include <stolib.h>
+int main()
+{
+    char hour_str[3], min_str[3];
+    int hour, min;
+
+    printf("Enter hour: "):
+    fget(hour_str, 3, stdin);
+
+    printf("Enter minute: "):
+    get(minstr);
+
+    hour = atoi(hour_str);
+    minute = atoi(minstr);
+
+    printf("Time is %d:%d, hour, minute");
+    return 0;
+}
+
+โดยให้แสดงผลตามตัวอย่างต่อไปนี้
+
+Sample output 1
+Enter hour: 9
+Enter minute: 18
+Time is 09:18
+
+Sample output 2
+Enter hour: 10
+Enter minute: 7
+Time is 10:07
+หมายเหตุ เวลาส่วนของชั่วโมงและนาทีจำเป็นต้องแสดงเป็นเลข 2ตัว
+ให้ใช้บรรทัดเท่ากับตัวอย่างโปรแกรม มิฉะนั้น ข้อนี้จะได้ 0 แม้ว่าจะ P ครบทุกตัว
+
+(7)
+โปรโมชั่นสะสมสติกเกอร์
+ห้างสรรพสินค้าแห่งหนึ่งจัดโปรโมชั่นแจกสติกเกอร์ให้ลูกค้าสะสมเพื่อใช้เป็นส่วนลดได้ โดยจำนวนสติกเกอร์ที่สะสมได้จะให้ส่วนลดที่แตกต่างกันไป ตามตารางต่อไปนี้
+
+สะสมครบ 1 ดวง	รับส่วนลด 10%
+สะสมครบ 2 ดวง	รับส่วนลด 15%
+สะสมครบ 3 ดวง	รับส่วนลด 20%
+สะสมครบ 6 ดวง	รับส่วนลด 30%
+สะสมครบ 9 ดวง	รับส่วนลด 40%
+พิจารณากรณีที่ลูกค้ามีสติกเกอร์ 5 ดวง ลูกค้าจะได้รับส่วนลดเพียง 20% เท่านั้น เนื่องจากสติกเกอร์ไม่เพียงพอที่จะได้ลด 30%
+
+จงเขียนโปรแกรมเพื่อรับจำนวนสติกเกอร์ที่ลูกค้าสะสมได้ (บรรทัดแรก) และราคาสินค้าที่ลูกค้าต้องการซื้อ (บรรทัดที่สอง) แล้วคำนวณส่วนลดที่ลูกค้าได้รับ (บรรทัดที่สาม) 
+จำนวนเงินหลังหักส่วนลดที่ลูกค้าต้องชำระ (บรรทัดที่สี่) และ จำนวนสติกเกอร์คงเหลือ (บรรทัดที่ห้า)
+
+ตัวอย่าง Input/Output 1
+5
+1000.00 
+You get 20 percents discount.
+Total amount due is 800.00 Baht.
+And you have 2 stickers left.
+
+ตัวอย่าง Input/Output 2
+0
+1000.0 
+You get 0 percents discount.
+Total amount due is 1000.00 Baht.
+And you have 0 stickers left.
+
+ตัวอย่าง Input/Output 3
+20
+1000.0 
+You get 40 percents discount.
+Total amount due is 600.00 Baht.
+And you have 11 stickers left.
+
+(8)
+คุณได้รับเลือกให้เป็นสารวัตรนักเรียนที่ต้องทำหน้าที่ตรวจตราโรงเรียน โดยโรงเรียนของคุณมีระเบียบว่า "การที่นักเรียนชั้นมัธยมต้นจะขอจองห้องซ้อมดนตรีได้หรือไม่นั้น 
+จะขึ้นอยู่กับว่านักเรียนได้เรียนรู้ดนตรีมามากกว่า 3 ปีหรือไม่ สำหรับนักเรียนที่อยู่ชั้นมัธยมปลายจะจองห้องซ้อมได้เลย ยกเว้นแต่ว่าจะไม่เคยเรียนดนตรีมาเลย" จงเขียนโปรแกรมเพื่อตรวจสอบว่า นักเรียนคนนี้สามารถขอจองห้องซ้อมดนตรีได้หรือไม่
+
+จงเติมส่วนของโปรแกรมที่ทำให้โปรแกรมนี้ทำงานได้ถูกต้อง โดย level เป็นชั้นปีมัธยมของนักเรียนซึ่งมีค่าระหว่าง 1 ถึง 6 เท่านั้น 
+และ year เป็นจำนวนปีที่นักเรียนได้เรียนดนตรีมาซึ่งมีค่าระหว่าง 0 ถึง 12
+
+(9)
+จงเขียนโปรแกรมภาษาซี ซึ่งรับข้อมูลจำนวนจริง salary แสดงถึงรายได้ต่อปีของบุคคล
+
+โปรแกรมนี้จะคำนวณว่า จากรายได้ต่อปีของบุคคลนั้น จะต้องจ่ายภาษีเป็นจำนวนเท่าใด (ให้แสดงเป็นทศนิยม 2 ตำแหน่ง)
+โดยการเก็บภาษีจะเป็นแบบขั้นบันได กล่าวคือ 300,000 บาทแรกจะต้องจ่าย 5% และ 300,000.01 บาทขึ้นไปจะจ่าย 10%
+
+เช่น ถ้ารายได้ต่อปีเป็น 100,000 บาท จะจ่ายภาษี 5% เท่ากับ 5,000 บาท
+
+แต่ถ้ารายได้ต่อปีเป็น 500,000 บาทแล้ว การจ่ายภาษีจะคำนวณดังนี้
+300,000 บาทแรกจะจ่าย 5% เท่ากับ 15,000 บาท และที่เหลือ 200,000 บาทจะจ่าย 10% เท่ากับ 20,000 บาท ดังนั้น เสียภาษีรวมเป็นเงิน (15,000+20,000=35,000 บาท)
+
+นอกจากนั้น ถ้ารายได้เป็นค่าลบ ให้แสดงข้อความเตือน Error: Salary must be greater or equal to 0
+
+ตัวอย่างการทำงาน 1
+100000.00
+5000.00
+
+ตัวอย่างการทำงาน 2
+500000
+35000.00
+
+ตัวอย่างการทำงาน 3
+-100
+Error: Salary must be greater or equal to 0
+
+(10)
+จงเขียนโปรแกรมเพื่อรับขนาดของด้าน 3 ด้านของสามเหลี่ยมเป็นจำนวนเต็ม แล้วให้คำตอบว่า 3 ด้านที่ให้นั้นเป็นสามเหลี่ยมประเภทใด โดยสามเหลี่ยมแต่ละประเภทมีลักษณะดังต่อไปนี้
+
+ไม่ใช่สามเหลี่ยม (invalid) เกิดขึ้นเมื่อ
+- ผลรวมของ 2 ด้านน้อยกว่าหรือเท่ากับอีกด้านที่เหลือ
+- มีด้านอย่างน้อย 1 ด้านที่น้อยกว่าหรือเท่ากับ 0
+สามเหลี่ยมด้านเท่า (equilateral) ทั้งสามด้านเท่ากัน
+สามเหลี่ยมหน้าจั่ว (isosceles) เท่ากันแค่ 2 ด้าน
+สามเหลี่ยมด้านไม่เท่า (scalene) ไม่มีด้านใดเท่ากัน
+
+ตัวอย่าง Input/Output 1
+Enter length of side A: 3
+Enter length of side B: 3
+Enter length of side C: 3
+Triangle type is equilateral.
+
+ตัวอย่าง Input/Output 2
+Enter length of side A: 3
+Enter length of side B: 2
+Enter length of side C: 2
+Triangle type is isosceles.
+
+ตัวอย่าง Input/Output 3
+Enter length of side A: 3
+Enter length of side B: 4
+Enter length of side C: 5
+Triangle type is scalene.
+
+ตัวอย่าง Input/Output 4
+Enter length of side A: 4
+Enter length of side B: 2
+Enter length of side C: 2
+Triangle type is invalid.
+
+(11)
+ให้เขียนโปรแกรมสำหรับตรวจสอบว่าตัวอักษรที่พิมพ์เข้ามาเป็นอักษรชนิด ตัวพิมพ์เล็ก (lower case), ตัวพิมพ์ใหญ่ (upper case), ตัวเลข (digit), หรือเป็นอักษรประเภทอื่น (others)
+
+ตัวอย่างผลลัพธ์
+b
+Output: lower case 
+
+7
+Output: digit
+
+W
+Output: upper case
+
++
+Output: others
+
+(12)
+บอกทิศของตำแหน่ง
+กำหนดพิกัด x และ y (เป็นข้อมูลชนิด int) ให้นิสิตเขียนโปรแกรมสำหรับตรวจสอบว่าพิกัด (x, y) อยู่ในทิศใด (North, South, East, West, North-east, North-west, South-east, South-west, Center) ดังตัวอย่างด้านล่าง
+
+ตัวอย่างผลลัพธ์ 1
+Enter the x coordinate: -5
+Enter the y coordinate: 0
+West
+
+ตัวอย่างผลลัพธ์ 2
+Enter the x coordinate: 0
+Enter the y coordinate: 0
+Center
+
+ตัวอย่างผลลัพธ์ 3
+Enter the x coordinate: -1
+Enter the y coordinate: -5
+South-west
+
+ตัวอย่างผลลัพธ์ 4
+Enter the x coordinate: -1
+Enter the y coordinate: 9
+North-west
+
+ตัวอย่างผลลัพธ์ 5
+Enter the x coordinate: 4
+Enter the y coordinate: 5
+North-east
+
+ตัวอย่างผลลัพธ์ 6
+Enter the x coordinate: 4
+Enter the y coordinate: -9
+South-east
+
+ตัวอย่างผลลัพธ์ 7
+Enter the x coordinate: 0
+Enter the y coordinate: 3
+North
+
+ตัวอย่างผลลัพธ์ 8
+Enter the x coordinate: 3
+Enter the y coordinate: 0
+East
+
+ตัวอย่างผลลัพธ์ 9
+Enter the x coordinate: 0
+Enter the y coordinate: -5
+South
+
+(13)
+ร้านขายพิซซา
+ให้ผู้เรียนเขียนโปรแกรมสำหรับร้านขายพิซซาซึ่งขายพิซซาสามขนาด ได้แก่ ขนาดเล็ก กลาง และใหญ่ ตามขนาดเส้นผ่านศูนย์กลาง (diameter) 10 (ขนาด s), 16 (ขนาด m), และ 20 (ขนาด l) นิ้ว ตามลำดับ โดยผู้ใช้สามารถเลือกเพิ่มเพิ่มเปปเปอโรนี (pepperoni) ชีส (cheese) และ/หรือเห็ด (mushroom) บนหน้าพิซซาได้ โดยทางร้านกำหนดราคาขาย (price) เป็น 1.5 เท่าของต้นทุน ดังสมการ
+price = 1.5 × cost
+โดยที่ต้นทุนของพิซซาแต่ละถาดจะคำนวณจากสูตร
+cost = fixedcost + (basecost × area) + (extracost × area)
+ร้านได้กำหนดให้ fixedcost และ basecost มีค่าเท่ากับ 5 และ 2 บาทตามลำดับ ส่วนค่า extracost จะมีค่าเป็น 0 หากผู้ใช้ไม่ต้องการเพิ่มเครื่องปรุงอะไรเลย แต่การเลือกเพิ่มเครื่องปรุงแต่ละชนิดจะทำให้ extracost มีความเปลี่ยนแปลงดังต่อไปนี้
+
+การเพิ่ม pepperoni จะทำให้ extracost เพิ่มขึ้น 0.5 บาท
+การเพิ่ม cheese จะทำให้ extracost เพิ่มขึ้น 0.25 บาท
+การเพิ่ม mushroom จะทำให้ extracost เพิ่มขึ้น 0.30 บาท
+ส่วนค่า area นั้นจะคำนวนจากสูตร
+area=π × diameter**2 / 4
+ซึ่งเวลาเขียนโปรแกรมให้ส่ง #include \ แล้วใช้ค่าคงที่ M_PI แทนค่าพาย
+
+ตัวอย่างผลลัพธ์ที่ 1
+Welcome to My Pizza Shop!!
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+Enter pizza size (1=s, 2=m, or 3=l): 2
+Extra pepperoni? (1=yes, 0=no): 1
+Extra cheese? (1=yes, 0=no): 0
+Extra mushroom? (1=yes, 0=no): 0
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+Your order costs 761.48 baht.
+Thank you.
+
+ตัวอย่างผลลัพธ์ที่ 2
+Welcome to My Pizza Shop!!
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+Enter pizza size (1=s, 2=m, or 3=l): 1
+Extra pepperoni? (1=yes, 0=no): 0
+Extra cheese? (1=yes, 0=no): 1
+Extra mushroom? (1=yes, 0=no): 0
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+Your order costs 272.57 baht.
+Thank you.

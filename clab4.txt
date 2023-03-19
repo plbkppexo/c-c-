@@ -1,0 +1,232 @@
+(20)
+แปลงเลขฐานสิบเป็นเลขฐานสอง (ขนาด 4 บิต)
+ให้นิสิตเขียนโปรแกรมรับเลขจำนวนเต็มฐานสิบซึ่งมีค่าตั้งแต่ 0 ถึง 15 และแปลงค่าเป็นเลขฐานสองขนาด 4 บิต แล้วพิมพ์ออกมา
+
+ให้นิสิตเขียนโปรแกรมโดยใช้ bitwise operator และไม่ใช้ if statement
+
+ตัวอย่างข้อมูลส่งออก
+7
+Binary number of 7 is 0111.
+
+(21)
+ฟังก์ชัน is_prime()
+เราเรียกจำนวนเต็มบวก x ว่าเป็นตัวเลขเฉพาะ (prime number) ถ้าจำนวนเต็มบวกทั้งหมดที่หาร x ได้ลงตัว คือ 1 และตัวมันเองเท่านั้น
+
+จงเขียนฟังก์ชัน
+int is_prime(int x);
+ซึ่งคืนค่า 0 ถ้า x ไม่ใช่จำนวนเฉพาะ และ 1 ถ้า x เป็นจำนวนเฉพาะ
+
+แล้วให้โปรแกรมนี้รับค่าข้อมูลเข้าที่เป็นจำนวนเต็มบวก n (n มีค่าไม่เกิน 10000) จากนั้นให้แสดงค่าจำนวนเฉพาะที่อยู่ในช่วงปิด [1, n]
+
+ตัวอย่างผลลัพธ์
+10
+2 is a prime number.
+3 is a prime number.
+5 is a prime number.
+7 is a prime number.
+
+19
+2 is a prime number.
+3 is a prime number.
+5 is a prime number.
+7 is a prime number.
+11 is a prime number.
+13 is a prime number.
+17 is a prime number.
+19 is a prime number.
+
+(22)
+จำนวนตัวเลข
+ให้เขียนโปรแกรมเพื่อรับเลขจำนวนเต็มไม่เกินเก้าหลัก (n) และเลขจำนวนเต็มหนึ่งหลัก (x โดยที่ 0 <= x <= 9) แล้วให้นับจำนวนของ x ที่มีใน n เช่น
+
+ตัวอย่างที่ 1
+346574390
+3
+There are 2 "3"(s) in 346574390.
+
+ตัวอย่างที่ 2
+454578
+6
+There is no "6" in 454578.
+
+ตัวอย่างที่ 3
+23450
+0
+There is only 1 "0" in 23450.
+
+ตัวอย่างที่ 4
+111111111
+1
+There are 9 "1"(s) in 111111111.
+
+(23)
+พิมพ์สี่เหลี่ยมขนมเปียกปูน
+เขียนโปรแกรมภาษาซี ที่รับเลขจำนวนเต็ม 2 จำนวน เช่น x กับ y (โดย x และ y มีค่าอย่างต่ำเป็น 4) แล้วแสดงสี่เหลี่ยมขนมเปียกปูนที่ยาว x และสูง y ที่มีลักษณะเอียงตามรูป ตัวอย่างเช่น
+
+ตัวอย่างผลลัพธ์ที่ 1
+6
+4
+******
+ *    *
+  *    *
+   ******
+
+ตัวอย่างผลลัพธ์ที่ 2
+20
+6
+********************
+ *                  *
+  *                  *
+   *                  *
+    *                  *
+     ********************
+
+(24)
+ภาพวาดรูปแบบหนึ่งที่มักเห็นประจำในอินเดียก็คือ ภาพวาดที่เรียกว่า รังโกลี (Rangoli) ซึ่งเป็นรูปแบบหนึ่งของศิลปะที่นิยมมากที่สุดในอินเดียก็ว่าได้ เป็นการวาดภาพด้วยทรายหรือผงสี บนพื้นขาวหรือพื้นสี ซึ่งมักใช้ตกแต่งหน้าบ้านของชาวอินเดียในงานเทศกาลต่างๆ หรือในสถานที่จัดงานสำคัญๆ หมายถึงการต้อนรับขับสู้อย่างอบอุ่นของเจ้าบ้านหรือเจ้าภาพต่อแขกที่มาเยือน
+
+ในข้อนี้จะให้เขียนโปรแกรมเพื่อวาดภาพรังโกลี จากตัวอักษรภาษาอังกฤษ โดยรับข้อมูลเป็นจำนวนเต็มบวก N (N <= 26) ซึ่งเป็นขนาดของภาพรังโกลี และเป็นลำดับอักษรภาษาอังกฤษสูงสุดที่ใช้ในภาพ เช่น N = 3 หมายถึงใช้ตัวอักษรภาษาอังกฤษ a, b และ c เท่านั้น
+
+ขนาดของภาพรังโกลีมีลักษณะดังนี้
+
+#Size N = 3
+----c----
+--c-b-c--
+c-b-a-b-c
+--c-b-c--
+----c----
+
+#Size N = 10
+------------------j------------------
+----------------j-i-j----------------
+--------------j-i-h-i-j--------------
+------------j-i-h-g-h-i-j------------
+----------j-i-h-g-f-g-h-i-j----------
+--------j-i-h-g-f-e-f-g-h-i-j--------
+------j-i-h-g-f-e-d-e-f-g-h-i-j------
+----j-i-h-g-f-e-d-c-d-e-f-g-h-i-j----
+--j-i-h-g-f-e-d-c-b-c-d-e-f-g-h-i-j--
+j-i-h-g-f-e-d-c-b-a-b-c-d-e-f-g-h-i-j
+--j-i-h-g-f-e-d-c-b-c-d-e-f-g-h-i-j--
+----j-i-h-g-f-e-d-c-d-e-f-g-h-i-j----
+------j-i-h-g-f-e-d-e-f-g-h-i-j------
+--------j-i-h-g-f-e-f-g-h-i-j--------
+----------j-i-h-g-f-g-h-i-j----------
+------------j-i-h-g-h-i-j------------
+--------------j-i-h-i-j--------------
+----------------j-i-j----------------
+------------------j------------------
+
+จากภาพรังโกลีขนาด 10 จะเห็นว่า ตัวอักษรที่ใช้วาดตัวนอกสุดคือ j ซึ่งเป็นตัวอักษรตัวที่ 10 ในภาษาอังกฤษ ถัดมาข้างในเป็น i, h, g, f, e, d, c, b, และ a ตามลำดับ
+
+หมายเหตุ
+
+หากสร้างภาพรังโกลีไม่ได้ ให้พิมพ์ -
+
+ตัวอย่างโปรแกรม 1
+10
+------------------j------------------
+----------------j-i-j----------------
+--------------j-i-h-i-j--------------
+------------j-i-h-g-h-i-j------------
+----------j-i-h-g-f-g-h-i-j----------
+--------j-i-h-g-f-e-f-g-h-i-j--------
+------j-i-h-g-f-e-d-e-f-g-h-i-j------
+----j-i-h-g-f-e-d-c-d-e-f-g-h-i-j----
+--j-i-h-g-f-e-d-c-b-c-d-e-f-g-h-i-j--
+j-i-h-g-f-e-d-c-b-a-b-c-d-e-f-g-h-i-j
+--j-i-h-g-f-e-d-c-b-c-d-e-f-g-h-i-j--
+----j-i-h-g-f-e-d-c-d-e-f-g-h-i-j----
+------j-i-h-g-f-e-d-e-f-g-h-i-j------
+--------j-i-h-g-f-e-f-g-h-i-j--------
+----------j-i-h-g-f-g-h-i-j----------
+------------j-i-h-g-h-i-j------------
+--------------j-i-h-i-j--------------
+----------------j-i-j----------------
+------------------j------------------
+
+ตัวอย่างโปรแกรม 2
+0
+-
+
+(25)
+Write a program to find out how many days a kid can collect money up to specific amount.
+
+First, the program asks the kid the goal amount of money he aims to collect. From that, everyday, the program asks the kid to enter leftover money from his stipend and reports (1) the total amount on that day, (2) remaining money to collect. When the goal money is reached, the program will report how many it takes to collect money.
+
+Assume the kid always enters positive amount of money.
+
+เขียนโปรแกรมเพื่อหาจำนวนวันที่จะต้องใช้ในการเก็บเงินให้ได้ตามเป้าหมาย
+
+โดยโปรแกรมจะต้องถามจำนวนเงินที่เป็นเป้าหมายในการเก็บเงินในบรรทัดแรก จากนั้น แต่ละวันโปรแกรมจะให้ใส่จำนวนเงินที่จะเก็บเพิ่ม และออกรายงานตามตัวอย่าง โดยมีข้อมูลดังนี้ (1) จำนวนวันที่ใช้ในการเก็บเงิน (2) ยอดเงินคงเหลือที่ต้องการเพื่อให้ถึงเป้าหมาย และเมื่อเก็บเงินจนถึงเป้าหมายแล้ว โปรแกรมจะรายงานว่าใช้เวลากี่วันในการเก็บเงิน
+
+สมมติว่าข้อมูลนำเข้าเป็นจำนวนบวกเสมอ
+
+Sample output 1
+Enter your goal amount: 100.00
+Enter money collected today: 20.00
+Total money collected up to day 1 is 20.00. You need 80.00 more.
+Enter money collected today: 10.00
+Total money collected up to day 2 is 30.00. You need 70.00 more.
+Enter money collected today: 15.00
+Total money collected up to day 3 is 45.00. You need 55.00 more.
+Enter money collected today: 30.00
+Total money collected up to day 4 is 75.00. You need 25.00 more.
+Enter money collected today: 25.00
+Congratulations! You take 5 days to reach your goal.
+
+Sample output 2
+Enter your goal amount: 25
+Enter money collected today: 5.50
+Total money collected up to day 1 is 5.50. You need 19.50 more.
+Enter money collected today: 10.25
+Total money collected up to day 2 is 15.75. You need 9.25 more.
+Enter money collected today: 10
+Congratulations! You take 3 days to reach your goal.
+
+(26)
+Draw triangle 4 #
+Your job is to write a program to draw a triangle.
+
+The program receives a number n as a height of triangle.
+
+Then the program print a triangle with the height = n and base = (2n-1) using *, with the base on the left of the screen, as in the examples.
+
+Sample output 1
+2
+*
+**
+*
+
+Sample output 2
+9
+*
+**
+***
+****
+*****
+******
+*******
+********
+*********
+********
+*******
+******
+*****
+****
+***
+**
+*
+
+(27)
+แปลงเลขฐาน (recursion)
+ให้เขียนโปรแกรม เพื่อแปลงเลขฐานสิบ เป็นเลขฐานสอง โดยใช้ Recursion
+
+ตัวอย่าง
+10
+1010
+
+123
+1111011
+
+
+
